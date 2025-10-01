@@ -4,6 +4,7 @@ import { Todolist } from './todolist/todolist';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, Todolist],
   templateUrl: './app.html',
   styleUrl: './app.css'

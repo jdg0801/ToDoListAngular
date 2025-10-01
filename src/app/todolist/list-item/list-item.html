@@ -1,0 +1,28 @@
+<form class="task-form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="taskName">Task Name</label>
+    <input 
+      type="text" 
+      id="taskName"
+      name="taskName"
+      [(ngModel)]="taskName"
+      class="form-control"
+      placeholder="Enter task name"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label for="taskDescription">Description</label>
+    <input 
+      type="text"
+      id="taskDescription"
+      [(ngModel)]="taskDescription"
+      name="taskDescription"
+      class="form-control"
+      placeholder="Enter task description">
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Save Task</button>
+  </div>
+</form>
