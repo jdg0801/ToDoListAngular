@@ -1,11 +1,14 @@
 <div class="todo-container">
   <div class="todo-controls">
-    <button type="button" class="btn btn-add">
+    <button type="button" class="btn btn-add" (click)="addNewCard()">
       <span>Add</span>
     </button>
-    <button type="button" class="btn btn-remove">
+    <button type="button" class="btn btn-remove" (click)="removeLastCard()">
       <span>Remove</span>
     </button>
   </div>
-  <app-list-item (taskAdded)="addTask($event)"/>
+  <app-list-item 
+  *ngFor="let item of items; let i = index"
+  [taskIndex]="i" 
+  (taskAdded)="addTask($event)"/>
 </div>

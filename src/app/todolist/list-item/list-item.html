@@ -21,8 +21,14 @@
       class="form-control"
       placeholder="Enter task description">
   </div>
-
+  
+  @if(!taskSaved){
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">Save Task</button>
   </div>
+  }@else {
+    <div class="form-actions">
+    <button type="submit" class="btn btn-secondary" hidden>Task Saved</button>
+  </div>
+}
 </form>

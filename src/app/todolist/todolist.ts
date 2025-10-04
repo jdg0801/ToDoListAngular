@@ -17,9 +17,29 @@ export class Todolist {  // Keep your name
         this.items.push(task);
     }
 
+    addNewCard() {
+    // Add an empty task card
+    this.items.push({
+      taskName: '',
+      taskDescription: '',
+      taskSaved: false
+    });
+  }
+
+   removeLastCard() {
+    if (this.items.length > 0) {
+      this.items.pop();
+    }
+  }
+
+    createTask(task: Task) {
+      this.items.push(task);
+    }    
+
 }
 
 export interface Task {
     taskName: string;
     taskDescription: string;
+    taskSaved: boolean;
 }
